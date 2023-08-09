@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coding-diary-by-elly/static/css/main.25f26121.css",
-    "main.js": "/coding-diary-by-elly/static/js/main.b18b3dd5.js",
+    "main.js": "/coding-diary-by-elly/static/js/main.3f1c177b.js",
     "react-syntax-highlighter/refractor-core-import.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js",
@@ -284,7 +284,7 @@
     "static/media/WhatsAppButtonGreenSmall.svg": "/coding-diary-by-elly/static/media/WhatsAppButtonGreenSmall.d40c27795e09df27c997bf320e2a4a8b.svg",
     "index.html": "/coding-diary-by-elly/index.html",
     "main.25f26121.css.map": "/coding-diary-by-elly/static/css/main.25f26121.css.map",
-    "main.b18b3dd5.js.map": "/coding-diary-by-elly/static/js/main.b18b3dd5.js.map",
+    "main.3f1c177b.js.map": "/coding-diary-by-elly/static/js/main.3f1c177b.js.map",
     "refractor-core-import.e262207d.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js.map",
@@ -567,6 +567,6 @@
   },
   "entrypoints": [
     "static/css/main.25f26121.css",
-    "static/js/main.b18b3dd5.js"
+    "static/js/main.3f1c177b.js"
   ]
 }
