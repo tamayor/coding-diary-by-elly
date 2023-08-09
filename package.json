@@ -2,7 +2,7 @@
   "name": "coding-diary-by-elly",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yester-time.github.io/",
+  "homepage": "https://yester-time.github.io/coding-diary-by-elly/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

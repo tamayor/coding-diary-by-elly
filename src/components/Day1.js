@@ -99,7 +99,7 @@ visitORexit.addEventListener('click', checkFunction);`}
                 />
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
-            <p>&times; Check my previously <a href="https://yester-time.github.io/me-coding-diary/index.html" target="_blank" rel="noreferrer">hard-coded diary </a>&times;</p>
+            <p>&times; Check my previously <a href="https://yester-time.github.io/me-code-diary/" target="_blank" rel="noreferrer">hard-coded diary </a>&times;</p>
         </section>
     )
 }
