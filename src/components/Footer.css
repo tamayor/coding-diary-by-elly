@@ -1,0 +1,35 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    background-color: black;
+}
+.connect{
+    display: flex;
+    align-items: center;
+}
+.whatsapp{
+    width: 120px;
+}
+.text-color{
+    color:#98c379;
+  }
+.sub-text-color{
+    color: white;
+}
+.margin-5{
+    margin: 5px;
+}
+.text-center{
+    text-align: center;
+}
+.font-size-50{
+    font-size: 50px;
+}
+.font-size-12{
+    font-size: 12px;
+}
+.width-small{
+    width: 100px;
+}

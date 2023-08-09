@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  background-color: rgb(25, 0, 0);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
+  color: #98c379;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover{
+  color:aquamarine
+}
+hr{
+  opacity: 0.3;
+}
+header{
+  margin: 20px 0 10px;
+  padding: 10px;
+  background-color: black;
+}
+.Day{
+  font-family: 'Encode Sans', sans-serif;
+  color: aliceblue;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 50px 10px;
+  padding: 10px;
+}
+.Day--day{
+  margin: 20px 0 2px;
+  width: 100%;
+}
+.Day--day-count{
+  font-size: 30px;
+}
+.Day--day-title{
+  font-weight: 500;
+}
+.Day--date{
+  margin: 0;
+  font-weight: 100;
+  width: 100%;
+  text-align: right;
+}
+.Day--thoughts{
+  width: 60%;
+  text-align: center;
+}
+.Day--button{
+  color: rgb(209, 209, 209);
+  background-color: #393939;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: max-content;
+}
+.Day--button:hover{
+  color: rgb(248, 248, 248);
+  background-color: #535353;
+  border: black;
+}
+.Day--button:active{
+  background-color: black;
+  outline: 1px solid rgb(147, 147, 147);
+}
+.Day--code{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Define a custom scrollbar style */
+::-webkit-scrollbar {
+  position: absolute;
+  width: 10px; /* Width of the scrollbar */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #393939;
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* On hover, style the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #98c379;
 }
