@@ -17,7 +17,7 @@ function Day(){
             <p  className="Day--thoughts">
                 This is my first day, and I just made this website!<br/>
                 <strong>I slept at 2 am in the morning!</strong><br/>
-                Working for 5 hours straight<br/>
+                Working for 5 hours straight.<br/>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
             {codeDisplay && <div className="Day--code"> <CodeBlock
@@ -100,7 +100,7 @@ visitORexit.addEventListener('click', checkFunction);`}
                 />
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
-            <p>&times; Check my previously <a href="https://yester-time.github.io/me-code-diary/" target="_blank" rel="noreferrer">hard-coded diary </a>&times;</p>
+            <p>&times; Check the first version of this <a href="https://tamayor.github.io/me-code-diary/" target="_blank" rel="noreferrer"> diary </a> which is hard-coded.&times;</p>
         </section>
     )
 }
