@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coding-diary-by-elly/static/css/main.2cd51e08.css",
-    "main.js": "/coding-diary-by-elly/static/js/main.44e5ae25.js",
+    "main.css": "/coding-diary-by-elly/static/css/main.5ee6fabb.css",
+    "main.js": "/coding-diary-by-elly/static/js/main.f2093f86.js",
     "react-syntax-highlighter/refractor-core-import.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js",
@@ -283,8 +283,8 @@
     "static/js/787.7c7c3a9c.chunk.js": "/coding-diary-by-elly/static/js/787.7c7c3a9c.chunk.js",
     "static/media/WhatsAppButtonGreenSmall.svg": "/coding-diary-by-elly/static/media/WhatsAppButtonGreenSmall.d40c27795e09df27c997bf320e2a4a8b.svg",
     "index.html": "/coding-diary-by-elly/index.html",
-    "main.2cd51e08.css.map": "/coding-diary-by-elly/static/css/main.2cd51e08.css.map",
-    "main.44e5ae25.js.map": "/coding-diary-by-elly/static/js/main.44e5ae25.js.map",
+    "main.5ee6fabb.css.map": "/coding-diary-by-elly/static/css/main.5ee6fabb.css.map",
+    "main.f2093f86.js.map": "/coding-diary-by-elly/static/js/main.f2093f86.js.map",
     "refractor-core-import.e262207d.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abnf.c54f213f.chunk.js.map",
@@ -566,7 +566,7 @@
     "787.7c7c3a9c.chunk.js.map": "/coding-diary-by-elly/static/js/787.7c7c3a9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cd51e08.css",
-    "static/js/main.44e5ae25.js"
+    "static/css/main.5ee6fabb.css",
+    "static/js/main.f2093f86.js"
   ]
 }
