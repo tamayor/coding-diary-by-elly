@@ -62,7 +62,8 @@ function toggleChangeForm(formState){
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
             <p  className="Day--thoughts">
-                Kinda hard but still trying! Just need to do it more often.
+                Kinda hard but still trying! Just need to do it more often.<br/>
+                This is the <a href=" https://tamayor.github.io/light-dark-mode/" target="_blank" rel="noreferrer">website</a> that uses that code.
             </p>
         </section>
     )
