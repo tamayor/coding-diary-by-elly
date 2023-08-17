@@ -1,9 +1,9 @@
-import './Header.css';
+
 function Header(){
     return(
         <header>
-            <h1 className="font-size-50 text-color margin-5 text-center">Me Coding Diary</h1>
-            <p className="font-size-12 sub-text-color margin-5 text-center"><i>A Diary Full of Codes</i></p>
+            <h1 className="Header--title">Me Coding Diary</h1>
+            <p className="Header--subtitle"><i>A Diary Full of Codes</i></p>
         </header>
     )
 }

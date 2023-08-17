@@ -10,113 +10,303 @@ html{
   --sub-special-color: aquamarine;
   --button-color: #213314;
 }
-a{
-  text-decoration: none;
-  color: var(--special-color);
+@media (min-width: 400px){
+  a{
+    text-decoration: none;
+    color: var(--special-color);
+  }
+  a:hover{
+    color:var(--sub-special-color)
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 10px;
+    padding: 10px;
+    background-color: black;
+  }
+  .Header--title{
+    color: var(--special-color);
+    font-size: 50px;
+    margin: 0;
+  }
+  .Header--subtitle{
+    opacity: .8;
+    color: var(--sub-special-color);
+    font-size: 20px;
+    margin: 0;
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+  }
+  .Footer--name{
+    color: var(--special-color);
+  }
+  .connect p{
+    margin-right: 10px;
+  }
+  .connect{
+    display: flex;
+    align-items: center;
+    color: var(--special-color);
+    font-size: 15px;
+  }
+  .whatsapp{
+    width: 150px;
+  }
+  .Day{
+    position: relative;
+    font-family: 'Encode Sans', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10px;
+    padding: 10px;
+  
+  }
+  .Day--bookmark{
+    top: 48px;
+    left: -1px;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: 0;
+    border-radius: 10px;
+    background-color: var(--special-color);
+    border: none;
+    transition: height .5s ease, top .5s ease;
+  }
+  .Day:hover .Day--bookmark{
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: -1px;
+  
+  }
+  .Day--day{
+    margin: 20px 0 2px;
+    width: 100%;
+  }
+  .Day--day-count{
+    font-size: 30px;
+  }
+  .Day--day-title{
+    font-weight: 500;
+  }
+  .Day--date{
+    margin: 0;
+    font-weight: 100;
+    width: 100%;
+    text-align: right;
+  }
+  .Day--thoughts{
+    width: 60%;
+    text-align: center;
+  }
+  .Day--button{
+    color: rgb(209, 209, 209);
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    transition: background-color .3s ease,  border-radius .3s ease;
+  
+  }
+  .Day--button:hover{
+    cursor: pointer;
+    color: var(--button-color);
+    background-color: var(--special-color);
+    border-radius: 20px;
+  }
+  
+  .Day--code{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* Define a custom scrollbar style */
+  ::-webkit-scrollbar {
+    position: absolute;
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  /* Track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  
+  /* Handle (thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #393939;
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  /* On hover, style the scrollbar handle */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #98c379;
+  }
+  
 }
-a:hover{
-  color:var(--sub-special-color)
-}
-
-header{
-  margin: 20px 0 10px;
-  padding: 10px;
-  background-color: black;
-}
-.Day{
-  position: relative;
-  font-family: 'Encode Sans', sans-serif;
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 10px;
-  padding: 10px;
-
-}
-.Day--bookmark{
-  top: 48px;
-  left: -1px;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  margin: 0;
-  border-radius: 10px;
-  background-color: var(--special-color);
-  border: none;
-  transition: height .5s ease, top .5s ease;
-}
-.Day:hover .Day--bookmark{
-  height: 100%;
-  width: 5px;
-  top: 0;
-  left: -1px;
-
-}
-.Day--day{
-  margin: 20px 0 2px;
-  width: 100%;
-}
-.Day--day-count{
-  font-size: 30px;
-}
-.Day--day-title{
-  font-weight: 500;
-}
-.Day--date{
-  margin: 0;
-  font-weight: 100;
-  width: 100%;
-  text-align: right;
-}
-.Day--thoughts{
-  width: 60%;
-  text-align: center;
-}
-.Day--button{
-  color: rgb(209, 209, 209);
-  background-color: var(--button-color);
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  width: max-content;
-  transition: background-color .3s ease,  border-radius .3s ease;
-
-}
-.Day--button:hover{
-  cursor: pointer;
-  color: var(--button-color);
-  background-color: var(--special-color);
-  border-radius: 20px;
-}
-
-.Day--code{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* Define a custom scrollbar style */
-::-webkit-scrollbar {
-  position: absolute;
-  width: 10px; /* Width of the scrollbar */
-}
-
-/* Track (background) of the scrollbar */
-::-webkit-scrollbar-track {
-  background: #252525;
-}
-
-/* Handle (thumb) of the scrollbar */
-::-webkit-scrollbar-thumb {
-  background: #393939;
-  border-radius: 10px; /* Rounded corners for the thumb */
-}
-
-/* On hover, style the scrollbar handle */
-::-webkit-scrollbar-thumb:hover {
-  background: #98c379;
+@media only screen and (min-width: 200px) and ((max-width: 399px)){
+  a{
+    text-decoration: none;
+    color: var(--special-color);
+  }
+  a:hover{
+    color:var(--sub-special-color)
+  }
+  
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 10px;
+    padding: 10px;
+    background-color: black;
+  }
+  .Header--title{
+    color: var(--special-color);
+    font-size: 30px;
+    margin: 0;
+  }
+  .Header--subtitle{
+    opacity: .8;
+    color: var(--sub-special-color);
+    font-size: 10px;
+    margin: 0;
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+  }
+  .Footer--name{
+    color: var(--special-color);
+  }
+  .connect p{
+    margin: 2px;
+  }
+  .connect{
+    color: var(--special-color);
+    font-size: 10px;
+  }
+  .whatsapp{
+    width: 100px;
+  }
+  .Day{
+    position: relative;
+    font-family: 'Encode Sans', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10px;
+    padding: 10px;
+  
+  }
+  .Day--bookmark{
+    top: 45px;
+    left: -1px;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: 0;
+    border-radius: 10px;
+    background-color: var(--special-color);
+    border: none;
+    transition: height .5s ease, top .5s ease;
+  }
+  .Day:hover .Day--bookmark{
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: -1px;
+  
+  }
+  .Day--day{
+    margin: 20px 0 2px;
+    width: 100%;
+  }
+  .Day--day-count{
+    font-size: 20px;
+  }
+  .Day--day-title{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .Day--date{
+    font-size: 12px;
+    margin: 10px;
+    font-weight: 100;
+    width: 100%;
+    text-align: right;
+  }
+  .Day--thoughts{
+    font-size: 12px;
+    width: 80%;
+    text-align: left;
+  }
+  .Day--button{
+    color: rgb(209, 209, 209);
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    transition: background-color .3s ease,  border-radius .3s ease;
+  
+  }
+  .Day--button:hover{
+    cursor: pointer;
+    color: var(--button-color);
+    background-color: var(--special-color);
+    border-radius: 20px;
+  }
+  
+  .Day--code{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 100vh;
+  }
+  
+  
+  /* Define a custom scrollbar style */
+  ::-webkit-scrollbar {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  
+  /* Handle (thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #393939;
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  /* On hover, style the scrollbar handle */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #98c379;
+  }
 }

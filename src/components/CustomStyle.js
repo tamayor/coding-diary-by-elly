@@ -1,5 +1,5 @@
 const customStyle = {
-  width: "max-content",
+  width: "100%",
   maxHeight: "500px",
   margin: "20px",
   fontFamily: "Fira Code, monospace", 

@@ -16,11 +16,11 @@ function Day(){
             <h4 className="Day--date">August 10, 2023</h4>
             <p  className="Day--thoughts">
                 Every night for two days already I'm forcing my cousin to study coding<br/>
-                <strong>Instead of shouting when i feel <i>gigil</i>, I just raise my voice</strong><br/>
-                I should try to be less frustrated and be a little bit compassionate because <br/>
+                <strong>Instead of shouting when i feel <i>gigil</i>, I just raise my voice</strong>.<br/>
+                I should try to be less frustrated and be a little bit compassionate because
                 I'm trying to help and encourage her.<br/>
-                Althought she's not motivated to do so,<br/>
-                I don't want her to be a shit all the time and just don't give a damn<br/>
+                Althought she's not motivated to do so,
+                I don't want her to be a shit all the time and just don't give a damn.<br/>
                 Sounds offensive but it's true.<br/>
                 This was her choice, and I'm trying to atleast help her keep afloat.<br/><br/>
                 I really get upset easily but today my <strong>empathetic side</strong> was tested.<br/>

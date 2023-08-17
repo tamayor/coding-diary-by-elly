@@ -100,7 +100,7 @@ visitORexit.addEventListener('click', checkFunction);`}
                 />
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
-            <p>&times; Check the first version of this <a href="https://tamayor.github.io/me-code-diary/" target="_blank" rel="noreferrer"> diary </a> which is hard-coded.&times;</p>
+            <p className="Day--thoughts">&times; Check the first version of this <a href="https://tamayor.github.io/me-code-diary/" target="_blank" rel="noreferrer"> diary </a> which is hard-coded.&times;</p>
         </section>
     )
 }
