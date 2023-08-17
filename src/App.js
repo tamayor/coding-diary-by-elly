@@ -11,21 +11,34 @@ import './App.css';
 
 
 function App() {
+  const [searchDay, setSearchDay] = React.useState([]);
   const Days = [
-                <Day1/>,<Day2/>,<Day3/>,<Day4/>,<Day5/>,<Day6/>,
+                <Day1 name='1'/>,<Day2 name='2'/>,<Day3 name='3'/>,<Day4 name='4'/>,<Day5 name='5'/>,
+                <Day6 name='6'/>,
               ]
 
-  const days = Days.map((day,index) => {
-    return(
-      <React.Fragment key={index}>
-        {day}
-      </React.Fragment>
-    )
+  const filteredDays = Days.filter (day => {
+    return day.props.name === searchDay
   })
+  const dayComponents = filteredDays.map((day, index) => (
+    <React.Fragment key={index}>{day}</React.Fragment>
+  ));
+  const allDays = Days.map((day, index) => (
+    <React.Fragment key={index}>{day}</React.Fragment>
+  ));
   return (
     <div className="App">
       <Header/>
-      {days}
+      
+      <div className='App-search'>
+        <label className='App-search-label'>Day </label><input className='App-search-input'
+          placeholder='0'
+          value={searchDay}
+          type='number'
+          onChange={e => setSearchDay(e.target.value)}
+        />
+      </div>
+      { searchDay === "" ? allDays : dayComponents}
       <Footer/>
     </div>
   );

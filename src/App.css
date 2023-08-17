@@ -37,6 +37,34 @@ html{
     font-size: 20px;
     margin: 0;
   }
+  .App-search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 10px;
+  }
+  .App-search-label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--special-color);
+  }
+  .App-search-input{
+    text-align: left;
+    height: max-content;
+    width: min-content;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--special-color);
+    border-radius: 5px;
+  }
+  input[type="number"]::-webkit-inner-spin-button, 
+  input[type="number"]::-webkit-outer-spin-button{
+    appearance: none;
+  }
   footer{
     display: flex;
     justify-content: space-around;
@@ -185,6 +213,30 @@ html{
     color: var(--sub-special-color);
     font-size: 10px;
     margin: 0;
+  }
+  .App-search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 10px;
+  }
+  .App-search-label{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--special-color);
+  }
+  .App-search-input{
+    text-align: left;
+    height: max-content;
+    width: min-content;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--special-color);
+    border-radius: 5px;
   }
   footer{
     display: flex;
