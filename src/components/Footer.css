@@ -1,0 +1,47 @@
+@media (min-width: 400px){
+    footer{
+      width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        padding: 10px;
+      }
+      .Footer--name{
+        color: var(--special-color);
+      }
+      .connect p{
+        margin-right: 10px;
+      }
+      .connect{
+        display: flex;
+        align-items: center;
+        color: var(--special-color);
+        font-size: 15px;
+      }
+      .whatsapp{
+        width: 150px;
+      }
+}
+@media only screen and (min-width: 200px) and ((max-width: 399px)){
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        padding: 10px;
+      }
+      .Footer--name{
+        color: var(--special-color);
+      }
+      .connect p{
+        margin: 2px;
+      }
+      .connect{
+        color: var(--special-color);
+        font-size: 10px;
+      }
+      .whatsapp{
+        width: 100px;
+      }
+}

@@ -1,4 +1,5 @@
 import WhatsAppLogo from  '../images/WhatsAppButtonGreenSmall.svg';
+import './Footer.css';
 function Footer(){
     return(
         <footer>

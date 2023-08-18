@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Nav from './components/Nav';
 import Day1 from './components/Day1';
 import Day2 from './components/Day2';
 import Day3 from './components/Day3';
@@ -11,7 +12,7 @@ import './App.css';
 
 
 function App() {
-  const [searchDay, setSearchDay] = React.useState([]);
+  const [searchDay, setSearchDay] = React.useState("");
   const Days = [
                 <Day1 name='1'/>,<Day2 name='2'/>,<Day3 name='3'/>,<Day4 name='4'/>,<Day5 name='5'/>,
                 <Day6 name='6'/>,
@@ -29,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      
+      <Nav/>
       <div className='App-search'>
         <label className='App-search-label'>Day </label><input className='App-search-input'
           placeholder='0'

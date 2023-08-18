@@ -2,6 +2,7 @@ import React from "react";
 import { CodeBlock } from "react-code-blocks";
 import myCustomTheme from "./CustomTheme";
 import customStyle from "./CustomStyle";
+import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
@@ -87,7 +88,7 @@ int main(){
                 />
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
-            <p  className="Day--thoughts">
+            <p className="Day--thoughts">
                 I won't be posting this shit here without understanding
                 so if it's in this diary <em>I understand it.</em>
             </p>

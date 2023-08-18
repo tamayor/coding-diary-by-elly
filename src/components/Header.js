@@ -1,5 +1,7 @@
+import './Header.css';
 
 function Header(){
+    
     return(
         <header>
             <h1 className="Header--title">Me Coding Diary</h1>

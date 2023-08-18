@@ -1,0 +1,44 @@
+@media (min-width: 400px){
+    header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 10px;
+        padding: 10px;
+        background-color: black;
+      }
+      .Header--title{
+        color: var(--special-color);
+        font-size: 50px;
+        margin: 0;
+      }
+      .Header--subtitle{
+        opacity: .8;
+        color: var(--sub-special-color);
+        font-size: 20px;
+        margin: 0;
+      }
+}
+
+@media only screen and (min-width: 200px) and ((max-width: 399px)){
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 10px;
+    padding: 10px;
+    background-color: black;
+  }
+  .Header--title{
+    color: var(--special-color);
+    font-size: 30px;
+    margin: 0;
+  }
+  .Header--subtitle{
+    opacity: .8;
+    color: var(--sub-special-color);
+    font-size: 10px;
+    margin: 0;
+  }
+}

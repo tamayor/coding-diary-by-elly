@@ -2,6 +2,7 @@ import React from "react";
 import { CodeBlock } from "react-code-blocks";
 import myCustomTheme from "./CustomTheme";
 import customStyle from "./CustomStyle";
+import './Day.css';
 
 function Day(){
 
