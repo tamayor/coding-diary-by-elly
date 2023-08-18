@@ -1,4 +1,4 @@
-@media (min-width: 400px){
+@media (min-width: 700px){
     footer{
       width: 100%;
         display: flex;
@@ -23,7 +23,7 @@
         width: 150px;
       }
 }
-@media only screen and (min-width: 200px) and ((max-width: 399px)){
+@media only screen and (min-width: 200px) and ((max-width: 699px)){
     footer{
         display: flex;
         justify-content: space-around;
