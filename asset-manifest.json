@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coding-diary-by-elly/static/css/main.c628fd19.css",
+    "main.css": "/coding-diary-by-elly/static/css/main.447d11e8.css",
     "main.js": "/coding-diary-by-elly/static/js/main.bec878f3.js",
     "react-syntax-highlighter/refractor-core-import.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js",
@@ -285,7 +285,7 @@
     "static/media/question-sign-in-circles.png": "/coding-diary-by-elly/static/media/question-sign-in-circles.256537c142ba5ffc2e6c.png",
     "static/media/WhatsAppButtonGreenSmall.svg": "/coding-diary-by-elly/static/media/WhatsAppButtonGreenSmall.d40c27795e09df27c997bf320e2a4a8b.svg",
     "index.html": "/coding-diary-by-elly/index.html",
-    "main.c628fd19.css.map": "/coding-diary-by-elly/static/css/main.c628fd19.css.map",
+    "main.447d11e8.css.map": "/coding-diary-by-elly/static/css/main.447d11e8.css.map",
     "main.bec878f3.js.map": "/coding-diary-by-elly/static/js/main.bec878f3.js.map",
     "refractor-core-import.e262207d.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter/refractor-core-import.e262207d.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map": "/coding-diary-by-elly/static/js/react-syntax-highlighter_languages_refractor_abap.a56e3313.chunk.js.map",
@@ -568,7 +568,7 @@
     "787.7c7c3a9c.chunk.js.map": "/coding-diary-by-elly/static/js/787.7c7c3a9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c628fd19.css",
+    "static/css/main.447d11e8.css",
     "static/js/main.bec878f3.js"
   ]
 }
