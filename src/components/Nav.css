@@ -79,6 +79,7 @@
 }
 @media only screen and (min-width: 200px) and ((max-width: 699px)){
     nav{
+        padding:  10px 0 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -121,7 +122,7 @@
         margin: 0 10px;
     }
     .Nav-faq-container img{
-        transition: opacity .5s ease;
+        transition: opacity .5s ease, filter .5s ease;
         filter: invert(94%) sepia(73%) saturate(506%) hue-rotate(33deg) brightness(83%) contrast(79%);
         height: 15px;
         width: 15px;
@@ -140,10 +141,11 @@
         color: var(--text-color);
         margin:5px;
         width: 80%;
-        transition: color 1s ease, font-size 2s ease;
+        transition: color 1s ease, font-size 2s ease, opacity 1s ease;
         font-size: 10px;   
         padding: 5px;
         transition: opacity .5s ease;
+        opacity: 1;
     }
     .show-text:hover{
         cursor: default;
@@ -151,7 +153,8 @@
         opacity: .5;
     }
     .dont-show-text{
-        transition: color 1s ease, font-size 2s ease;
+        opacity: 0;
+        transition: color 1s ease, font-size 2s ease, opacity 1s ease;
         color: var(--button-color);
         font-size: 1px;
     }

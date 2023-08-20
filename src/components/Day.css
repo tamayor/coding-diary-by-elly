@@ -75,8 +75,29 @@
       justify-content: center;
       align-items: center;
     }
-    
-    
+    .Day--code span code{
+      width: 80vw;
+    }
+    .certificate-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .certificate{
+      width:500px; 
+      height: 336.70px;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    .hide-certificate{
+      width:500px; 
+      height: 0;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
     /* Define a custom scrollbar style */
     ::-webkit-scrollbar {
       position: absolute;
@@ -102,6 +123,7 @@
   }
   @media only screen and (min-width: 200px) and ((max-width: 699px)){
     .Day{
+      width: 90%;
       position: relative;
       font-family: 'Encode Sans', sans-serif;
       color: var(--text-color);
@@ -109,7 +131,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 50px 10px;
+      margin: auto;
       padding: 10px;
     
     }
@@ -177,10 +199,32 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 80vw;
       height: max-content;
     }
-    
+    .Day--code span code{
+      width: 80vw;
+    }
+    .certificate-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .certificate{
+      width:300px; 
+      height: 202.04px;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    .hide-certificate{
+      opacity: 0;
+      width:300px; 
+      height: 0;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
     
     /* Define a custom scrollbar style */
     ::-webkit-scrollbar {

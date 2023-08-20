@@ -1,10 +1,13 @@
 @media (min-width: 700px){
     header{
+        position: sticky;
+        top: 0;
+        z-index: 1;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 0 10px;
+        margin: 10px 0 10px;
         padding: 10px;
         background-color: black;
       }
@@ -23,10 +26,14 @@
 
 @media only screen and (min-width: 200px) and ((max-width: 699px)){
 header{
+  width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0 10px;
+    margin: 10px 0 10px;
     padding: 10px;
     background-color: black;
   }

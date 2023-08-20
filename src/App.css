@@ -36,7 +36,6 @@ html{
     color: var(--special-color);
   }
   .App-search-input{
-    margin: 0;
     text-align: left;
     height: max-content;
     width: 50px;
@@ -62,11 +61,12 @@ html{
     color:var(--sub-special-color)
   }
   .App-search{
-    width: 100%;
+    width: max-content;
     display: flex;
     align-items: center;
     justify-content: left;
-    margin: 0 10px;
+    margin: 10px 10px;
+    padding: 10px;
   }
   .App-search-label{
     font-size: 15px;
@@ -76,7 +76,7 @@ html{
   .App-search-input{
     text-align: left;
     height: max-content;
-    width: min-content;
+    width: 50px;
     font-size: 20px;
     font-weight: 500;
     background-color: transparent;
@@ -84,5 +84,9 @@ html{
     outline: none;
     color: var(--special-color);
     border-radius: 5px;
+  }
+  input[type="number"]::-webkit-inner-spin-button, 
+  input[type="number"]::-webkit-outer-spin-button{
+    appearance: none;
   }
 }
