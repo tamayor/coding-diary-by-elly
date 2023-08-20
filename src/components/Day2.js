@@ -7,6 +7,7 @@ import './Day.css';
 function Day(){
 
   const [codeDisplay, setCodeDisplay] = React.useState(false);
+  const [codeExpand, setCodeExpand] = React.useState(false);
   function handleCodeDisplay(){
     setCodeDisplay(!codeDisplay)
   }
@@ -23,7 +24,10 @@ function Day(){
                 <strong><i>Composability</i></strong>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-                {codeDisplay && <div className="Day--code">
+                {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
                   <CodeBlock
                 text= {`import Day1 from './components/Day1';
 import Day2 from './components/Day2';

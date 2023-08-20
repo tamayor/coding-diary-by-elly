@@ -4,7 +4,6 @@ import './Day.css';
 
 function Day(){
     const [certificate, setCertificate] = React.useState(false);
-     
     function handleCodeDisplay(){
         setCertificate(!certificate);
     }
@@ -23,10 +22,8 @@ function Day(){
                 <strong>PS: </strong>Don't expect mind blowing output.
             </p>
             {!certificate && <button className="Day--button" onClick={handleCodeDisplay}>My First Coding Certificate</button>}
-            <div className="certificate-container">
-                <img src={firstCertificate} alt="certificate from freeCodeCamp" className={certificate ? "certificate" : "hide-certificate"}/>
-            {certificate && <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>}
-            </div>
+            <img src={firstCertificate} alt="certificate from freeCodeCamp" className={certificate ? "certificate" : "hide-certificate"}/>  
+                {certificate && <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>}
             <p className="Day--thoughts">
             Report to them if I violated the <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" target="_blank" rel="noreferrer">freeCodeCamp's Academic Honesty Policy</a>
             </p>

@@ -6,9 +6,12 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-
+    const [codeExpand, setCodeExpand] = React.useState(false);
     function handleCodeDisplay(){
-        setCodeDisplay(!codeDisplay)
+        setCodeDisplay(!codeDisplay);
+        if(codeExpand){
+            setCodeExpand(!codeExpand)
+        }
     }
     return(
         <section className="Day">
@@ -21,7 +24,11 @@ function Day(){
                 Today I learned something in react and this is what it looks like.<br/>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-            {codeDisplay && <div className="Day--code"> <CodeBlock
+            {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
                 text= {`function App() {
     const [form, setForm] = React.useState('login');
         // this function accepts a parameter that will change the value of form
@@ -45,9 +52,7 @@ function Day(){
         </div>
     );
 }
-/*
-                  And we will get the value from other components with this.
-*/
+/*And we will get the value from other components with this.*/
 
 <label>Don't have an account? 
     <span className="click-here" onClick={()=> props.onFormSwitch('signup')}> 

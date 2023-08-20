@@ -6,9 +6,12 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-
+    const [codeExpand, setCodeExpand] = React.useState(false);
     function handleCodeDisplay(){
-        setCodeDisplay(!codeDisplay)
+        setCodeDisplay(!codeDisplay);
+        if(codeExpand){
+            setCodeExpand(!codeExpand)
+        }
     }
     return(
         <section className="Day">
@@ -24,7 +27,11 @@ function Day(){
                 And use the sorting functions to sort the random arrays and print it's execution time.
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-            {codeDisplay && <div className="Day--code"> <CodeBlock
+            {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
                 text= {`#include <stdio.h>
 #include <stdlib.h>     /*** in order to access rand() ***/
 #include <time.h>       /*** in order to access clock() ***/

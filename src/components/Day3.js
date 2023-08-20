@@ -6,9 +6,12 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-
+    const [codeExpand, setCodeExpand] = React.useState(false);
     function handleCodeDisplay(){
-        setCodeDisplay(!codeDisplay)
+        setCodeDisplay(!codeDisplay);
+        if(codeExpand){
+            setCodeExpand(!codeExpand)
+        }
     }
     return(
         <section className="Day">
@@ -30,7 +33,11 @@ function Day(){
                 She's having a hard time understanding this code :
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-            {codeDisplay && <div className="Day--code"> <CodeBlock
+            {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
                 text= {`#include <stdio.h>
 int main(){
     int i; //-----initialize variable

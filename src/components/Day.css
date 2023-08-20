@@ -74,9 +74,47 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: max-content;
+      width: 90%;
+    }
+    .Day--code-expand{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      z-index: 1;
+      width: 100vw;
+      height: max-content;
     }
     .Day--code span code{
-      width: 80vw;
+      width: 100%;
+    }
+    .code-expand{
+      background-color: var(--special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 30px;
+      border-radius: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .code-shrink{
+      background-color: var(--sub-special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 30px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
     }
     .certificate-container{
       display: flex;
@@ -102,6 +140,7 @@
     ::-webkit-scrollbar {
       position: absolute;
       width: 10px; /* Width of the scrollbar */
+      height: 0px;
     }
     
     /* Track (background) of the scrollbar */
@@ -200,15 +239,46 @@
       justify-content: center;
       align-items: center;
       height: max-content;
+      width: 90%;
     }
-    .Day--code span code{
-      width: 80vw;
-    }
-    .certificate-container{
+    .Day--code-expand{
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      height: max-content;
+      z-index: 1;
+      width: 100vw;
+      height: max-content;
+    }
+    .Day--code span code{
+      width: 100%;
+    }
+    .code-expand{
+      background-color: var(--special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 0;
+      border-radius: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .code-shrink{
+      background-color: var(--sub-special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 0;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
     }
     .certificate{
       width:300px; 
@@ -218,6 +288,9 @@
       transition: height .5s ease;
     }
     .hide-certificate{
+      position: absolute;
+      z-index: -1;
+      top: 100px;
       opacity: 0;
       width:300px; 
       height: 0;
@@ -248,4 +321,5 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #98c379;
     }
+   
   }

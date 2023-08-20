@@ -6,9 +6,12 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-
+    const [codeExpand, setCodeExpand] = React.useState(false);
     function handleCodeDisplay(){
-        setCodeDisplay(!codeDisplay)
+        setCodeDisplay(!codeDisplay);
+        if(codeExpand){
+            setCodeExpand(!codeExpand)
+        }
     }
     return(
         <section className="Day">
@@ -21,7 +24,11 @@ function Day(){
                 <strong>Insertion Sort and Selection Sort</strong>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-            {codeDisplay && <div className="Day--code"> <CodeBlock
+            {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
                 text= {`#include <stdio.h>
 void insertion_sort(int arr[], int length){
     for(int i=1 ; i<length ; i++){

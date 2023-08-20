@@ -6,9 +6,12 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-
+    const [codeExpand, setCodeExpand] = React.useState(false);
     function handleCodeDisplay(){
         setCodeDisplay(!codeDisplay)
+        if(codeExpand){
+            setCodeExpand(!codeExpand)
+        }
     }
     return(
         <section className="Day">
@@ -21,7 +24,11 @@ function Day(){
                 Working for 5 hours straight.<br/>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
-            {codeDisplay && <div className="Day--code"> <CodeBlock
+            {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand(prevValue => !prevValue)}>
+                    <button className={codeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
                 text= {`const MAX = 1;
 
 const mcdDaysInputEnter = document.getElementById("mcd_days_input");
