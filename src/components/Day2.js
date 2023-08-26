@@ -9,12 +9,15 @@ function Day(){
   const [codeDisplay, setCodeDisplay] = React.useState(false);
   const [codeExpand, setCodeExpand] = React.useState(false);
   function handleCodeDisplay(){
-    setCodeDisplay(!codeDisplay)
+    setCodeDisplay(!codeDisplay);
+    if(codeExpand){
+      setCodeExpand(!codeExpand)
+    }
   }
     return(
         <section className="Day">
           <hr className="Day--bookmark"/>
-            <h2 className="Day--day"><span className="Day--day-count">Day 2</span> : <span className="Day--day-title">Transfer to React from Hard Coding</span></h2> 
+            <h2 className="Day--day"><span className="Day--day-count">Day 2</span> :<br/>  <span className="Day--day-title">Transfer to React from Hard Coding</span></h2> 
             <h4 className="Day--date">August 7, 2023</h4>
             <p  className="Day--thoughts">
                 Because it's hard to maintain hard coded codes like this diary.<br/>

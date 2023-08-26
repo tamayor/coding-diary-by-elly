@@ -16,7 +16,7 @@ function Day(){
     return(
         <section className="Day">
             <hr className="Day--bookmark"/>
-            <h2 className="Day--day"><span className="Day--day-count">Day 6</span> : <span className="Day--day-title">Studying my School Assignment</span></h2> 
+            <h2 className="Day--day"><span className="Day--day-count">Day 6</span> :<br/>  <span className="Day--day-title">Studying my School Assignment</span></h2> 
             <h4 className="Day--date">August 17, 2023</h4>
             <h4 className="Day--date">around 10PM</h4>
             <p  className="Day--thoughts">
