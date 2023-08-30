@@ -20,8 +20,10 @@ function Day(){
             <h4 className="Day--date">August 17, 2023</h4>
             <h4 className="Day--date">around 1AM</h4>
             <p  className="Day--thoughts">
-                <strong>Trying my best to atleast code during free time!</strong> <br/>
-                Today I learned something in react and this is what it looks like.<br/>
+                <strong>Trying my best to atleast code<br/>
+                during free time!</strong> <br/>
+                Today I learned something in React and<br/>
+                this is what it looks like.<br/>
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
             {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
@@ -69,7 +71,7 @@ function Day(){
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
             <p className="Day--thoughts">
-                Kinda hard but still trying! Just need to do it more often.<br/>
+                Kinda hard but still trying!<br/> Just need to do it more often.<br/>
                 This is the <a href=" https://tamayor.github.io/light-dark-mode/" target="_blank" rel="noreferrer">website</a> that uses that code.
             </p>
         </section>

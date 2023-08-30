@@ -21,10 +21,14 @@ function Day(){
             <h4 className="Day--date">around 10PM</h4>
             <p  className="Day--thoughts">
                 <strong>Working on an Assignment</strong> <br/>
-                Our task is to learn some classic sorting functions like insertion and selection in <strong>C</strong>.<br/>
-                Create randomly generated numbers using <strong>&#x3c;stdlib.h&#x3e;</strong>'s rand&#x28;&#x29;.<br/>
-                Measure its execution time using <strong>&#x3c;time.h&#x3e;</strong>'s clock&#x28;&#x29;.<br/>
-                And use the sorting functions to sort the random arrays and print it's execution time.
+                Our task is to learn <br/>some classic sorting functions like<br/>
+                <strong>insertion and selection </strong>in <strong>C</strong>.<br/>
+                Create randomly generated numbers using <br/>
+                <strong>&#x3c;stdlib.h&#x3e;</strong>'s rand&#x28;&#x29;.<br/>
+                Measure its execution time using <br/>
+                <strong>&#x3c;time.h&#x3e;</strong>'s clock&#x28;&#x29;.<br/>
+                And use the sorting functions to sort<br/>
+                the random arrays and print it's execution time.
             </p>
             {!codeDisplay && <button className="Day--button" onClick={handleCodeDisplay}>Code</button>}
             {codeDisplay && <div className={ codeExpand ? "Day--code-expand" : "Day--code" }>
@@ -123,8 +127,10 @@ int main(){
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
             <p className="Day--thoughts">
-            Fun Fact:<br/>   <i>The execution time of sorting an array of 10 elements is <strong>0sec</strong> and <br/>
-            relatively close to <strong>1sec</strong> for an array of 10k elements. </i>
+            Fun Fact:<br/>   <i>The execution time of sorting <br/>
+            an array of 10 elements is <strong>0 sec</strong> and <br/>
+            relatively close to <strong>1 sec</strong> <br/>
+            for an array of 10k elements. </i>
             </p>
         </section>
     )

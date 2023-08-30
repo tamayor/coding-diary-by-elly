@@ -96,8 +96,10 @@ int main(){
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
             <p className="Day--thoughts">
-                I won't be posting this shit here without understanding
-                so if it's in this diary <em>I understand it.</em>
+                I won't be posting this shit here <br/>
+                without understanding it<br/>
+                so if it's in this diary <br/>
+                <em>I understand it.</em>
             </p>
         </section>
     )

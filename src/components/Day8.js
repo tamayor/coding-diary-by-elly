@@ -2,6 +2,7 @@ import React from "react";
 import './Day.css';
 
 function Day(){
+    
 
     return(
         <section className="Day">
@@ -10,7 +11,9 @@ function Day(){
             <h4 className="Day--date">August 25, 2023</h4>
             <h4 className="Day--date">around 1AM</h4>
             <p  className="Day--thoughts">
-                <strong>The entire day yesterday until now. <br/>My head is just focused on doing this two websites.</strong> <br/>
+                <strong>The entire day yesterday <br/>
+                until now. <br/>My head is just focused <br/>
+                on doing this two websites.</strong> <br/>
             </p>
             <p  className="Day--thoughts">Just for Fun</p>
             <a href="https://tamayor.github.io/pl-history/" target="_blank" rel="noreferrer">

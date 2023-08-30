@@ -20,9 +20,9 @@ function Day(){
             <h2 className="Day--day"><span className="Day--day-count">Day 2</span> :<br/>  <span className="Day--day-title">Transfer to React from Hard Coding</span></h2> 
             <h4 className="Day--date">August 7, 2023</h4>
             <p  className="Day--thoughts">
-                Because it's hard to maintain hard coded codes like this diary.<br/>
-                I thought of coding it with React.js library instead,
-                because react has the ability to breakdown codes to components. <br/>
+                Because it's hard to maintain <br/>hard-coded codes like this diary.<br/>
+                I thought of coding it with <br/><strong>React.js</strong> library instead,<br/>
+                because React has the ability to <br/>breakdown codes to components. <br/>
                 As you can see this is the main source code.<br/>
                 <strong><i>Composability</i></strong>
             </p>
