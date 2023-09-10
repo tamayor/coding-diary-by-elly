@@ -10,8 +10,8 @@ import Day6 from './components/Day6';
 import Day7 from './components/Day7';
 import Day8 from './components/Day8';
 import Day9 from './components/Day9';
-//import Day10 from './components/Day10';
-//import Day11 from './components/Day11';
+import Day10 from './components/Day10';
+import Day11 from './components/Day11';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -20,7 +20,8 @@ function App() {
   const [searchDay, setSearchDay] = React.useState("");
   const Days = [
                 <Day1 name='1'/>,<Day2 name='2'/>,<Day3 name='3'/>,<Day4 name='4'/>,<Day5 name='5'/>,
-                <Day6 name='6'/>, <Day7 name='7'/>,<Day8 name='9'/> ,<Day9 name='9'/>
+                <Day6 name='6'/>, <Day7 name='7'/>,<Day8 name='8'/> ,<Day9 name='9'/>,<Day10 name='10'/>
+                ,<Day11 name='11'/>
               ]
 
   const filteredDays = Days.filter (day => {

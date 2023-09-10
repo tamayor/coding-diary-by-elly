@@ -7,16 +7,24 @@ import './Day.css';
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
     const [codeExpand, setCodeExpand] = React.useState(false);
+    const [codeDisplay2, setCodeDisplay2] = React.useState(false);
+    const [codeExpand2, setCodeExpand2] = React.useState(false);
     function handleCodeDisplay(){
         setCodeDisplay(!codeDisplay);
         if(codeExpand){
             setCodeExpand(!codeExpand)
         }
     }
+    function handleCodeDisplay2(){
+        setCodeDisplay2(!codeDisplay2);
+        if(codeExpand2){
+            setCodeExpand2(!codeExpand2)
+        }
+    }
     return(
         <section className="Day">
             <hr className="Day--bookmark"/>
-            <h2 className="Day--day"><span className="Day--day-count">Day 8</span> :<br/> <span className="Day--day-title">I Made 2 Static Website Today...Yesterday!</span></h2> 
+            <h2 className="Day--day"><span className="Day--day-count">Day 9</span> :<br/> <span className="Day--day-title">Learning <strong>pointers</strong> and <strong>struct</strong></span></h2> 
             <h4 className="Day--date">August 30, 2023</h4>
             <h4 className="Day--date">since 28 : around 2pm</h4>
             <p className="Day--thoughts">
@@ -47,8 +55,9 @@ function Day(){
                 <strong>pointers and struct</strong> in C</span>
              </p> 
              <div className="Day--thoughts">
-                <p  Style={"border:3px dotted #98c379; padding: 10px; border-radius: 10px"}>Me : Give me another problem using struct</p>
+                <p  Style={"border:3px dotted #98c379; padding: 10px; border-radius: 10px"}><strong>Me</strong> : Give me another problem using struct</p>
                 <p  Style={"border:3px dotted #98c379; padding: 10px; border-radius: 10px"}>
+                <strong>ChatGPT</strong> :<br/>
                 **Problem: Student Records**<br/>
 
                 Create a program that manages student records using a struct. Each student should have the following information:<br/>
@@ -114,6 +123,7 @@ int main(){
     printf("How many students do you have?\\n");
     printf("I have : ");
     scanf("%d", &num_of_students);
+    printf("\\n");
     
     Student * students = (Student *) malloc (sizeof(Student) * num_of_students);
     char name[50];
@@ -161,62 +171,200 @@ int main(){
                     wrapLines={true}
                     theme={myCustomTheme}
                     customStyle={customStyle}
-                />
-                <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
-                <p className="Day--thoughts">Sample Output</p>
-                <p className="Day--thoughts" Style={"border:3px dotted #98c379; padding: 10px; border-radius: 10px; text-align:left;"}>
-                How many students do you have?
-I have : 3<br/>
-Student Number &#91;1&#93;<br/>
-Name : Hulland<br/>
-Roll Number : 1<br/>
-First Grade : 98<br/>
-Second Grade : 89<br/>
-Third Grade : 87<br/>
-Student Roll Number &#91;1&#93; has an average of : 91.333336.<br/>
-<br/>
-Student Number &#91;2&#93;<br/>
-Name : Jaken<br/>
-Roll Number : 2<br/>
-First Grade : 85<br/>
-Second Grade : 83<br/>
-Third Grade : 90<br/>
-Student Roll Number &#91;2&#93; has an average of : 86.000000.<br/>
-<br/>
-Student Number &#91;3&#93;<br/>
-Name : Paw<br/>
-Roll Number : 3<br/>
-First Grade : 90<br/>
-Second Grade : 87<br/>
-Third Grade : 91<br/>
-Student Roll Number &#91;3&#93; has an average of : 89.333336.<br/>
-<br/>
----All Student Details---<br/>
-Name : Hulland<br/>
-Roll Number : 1<br/>
-First Grade : 98.00<br/>
-Second Grade : 89.00<br/>
-Third Grade : 87.00<br/>
-Average Grade : 91.33<br/>
-<br/>
-Name : Jaken<br/>
-Roll Number : 2<br/>
-First Grade : 85.00<br/>
-Second Grade : 83.00<br/>
-Third Grade : 90.00<br/>
-Average Grade : 86.00<br/>
-<br/>
-Name : Paw<br/>
-Roll Number : 3<br/>
-First Grade : 90.00<br/>
-Second Grade : 87.00<br/>
-Third Grade : 91.00<br/>
-Average Grade : 89.33<br/>
-<br/>
-The Highest Average Marks goes to : <br/>
-Hulland with an average of 91.33<br/>
-                </p>
+                /> <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
+            <br/>   
+                {!codeDisplay2 && <button className="Day--button" onClick={handleCodeDisplay2}>Code 2</button>}
+            {codeDisplay2 && <div className={ codeExpand2 ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setCodeExpand2(prevValue => !prevValue)}>
+                    <button className={codeExpand2 ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
+                text= {`#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+    int account_num;
+    char account_name[50];
+    float balance;
+} Bank_Account;
+
+
+void deposit (Bank_Account *b, int *num_accounts);
+void withdraw (Bank_Account *b, int *num_accounts);
+void display (Bank_Account *b, int *num_accounts);
+void prompt(Bank_Account * bank_accounts, int *num_accounts);
+int main(){
+    int num_accounts = 3;
+    Bank_Account * bank_accounts = (Bank_Account*)malloc(sizeof(Bank_Account)*num_accounts);
+    
+    bank_accounts[0].account_num = 111;
+    strcpy(bank_accounts[0].account_name, "John");
+    bank_accounts[0].balance = 100;
+    
+    bank_accounts[1].account_num = 222;
+    strcpy(bank_accounts[1].account_name, "Kanye");
+    bank_accounts[1].balance = 200;
+    
+    bank_accounts[2].account_num = 333;
+    strcpy(bank_accounts[2].account_name, "Lowe");
+    bank_accounts[2].balance = 300;
+    
+    printf("Bank Account System\\n\\n");
+    for(int i=0 ; i<num_accounts ; i++){
+        printf("%d\\n", i+1);
+        printf("Account Number : %d\\n", bank_accounts[i].account_num);
+        printf("Account Holder's Name : %s\\n", bank_accounts[i].account_name);
+        printf("Account Balance : $%.2f\\n", bank_accounts[i].balance);
+        printf("\\n");
+    };
+    prompt(bank_accounts, &num_accounts);
+    
+    free(bank_accounts);
+    
+};
+void prompt(Bank_Account * bank_accounts, int *num_accounts){
+    int option;
+    while(option!=4){
+        
+        printf("Select an option:\\n"
+                "1. Deposit\\n"
+                "2. Withdraw\\n"
+                "3. Display Account Details\\n"
+                "4. Exit\\n\\n"
+                "Enter your choice: ");
+        scanf("%d", &option);
+        switch(option){
+            case 1: deposit(bank_accounts,num_accounts);
+            break;
+            case 2: withdraw(bank_accounts,num_accounts);
+            break;
+            case 3: display(bank_accounts,num_accounts);
+            break;
+            case 4: printf ("Exiting the program");
+            break;
+            default:
+                    printf("!! Invalid option. Please choose a valid option.!!\\n\\n");
+                    option=0;
+            break;
+        }
+    }
+}
+
+void deposit (Bank_Account *b, int *num_accounts){
+    printf("\\n----------DEPOSIT----------\\n\\n");
+    int acc_num;
+    float deposit_amount;
+    printf("Enter Account Number: ");
+    scanf("%d", &acc_num);
+    
+    int match = 0;
+    for(int j=0 ;j<*num_accounts ; j++){
+        if(acc_num == b[j].account_num){
+            match = 1;
+        }
+    }
+    if(match){
+        printf("Enter Deposit Amount: ");
+        scanf("%f", &deposit_amount);
+        printf("\\n");
+        for(int i=0 ; i<*num_accounts ; i++){
+            if(b[i].account_num == acc_num){
+                b[i].balance += deposit_amount;
+                printf("Account Number : %d\\n", b[i].account_num);
+                printf("Account Holder's Name : %s\\n", b[i].account_name);
+                printf("Account Balance : $%.2f\\n", b[i].balance);
+                printf("\\n");
+                printf("You successfully deposited %.2f\\n", deposit_amount);
+                printf("Current balance is $%.2f\\n\\n", b[i].balance);
+                break;
+            }
+        }
+    }else printf("\\n!! Account Number not found !!\\n\\n");
+    
+    
+};
+void withdraw (Bank_Account *b, int *num_accounts){
+    printf("\\n----------WITHDRAW----------\\n\\n");
+        int acc_num;
+    float withdraw_amount;
+    printf("Enter Account Number: ");
+    scanf("%d", &acc_num);
+    int match = 0;
+    for(int j=0 ;j<*num_accounts ; j++){
+        if(acc_num == b[j].account_num){
+            match = 1;
+        }
+    }
+    if(match){
+        printf("Enter Withdraw Amount: ");
+        scanf("%f", &withdraw_amount);
+        printf("\\n");
+        
+        for(int i=0 ; i<*num_accounts ; i++){
+            if(b[i].account_num == acc_num){
+                if(withdraw_amount > b[i].balance){
+                    printf("!! Insufficient Balance !!\\n");
+                    printf("Account %s has only %.2f\\n\\n", b[i].account_name, b[i].balance);
+                    while(withdraw_amount > b[i].balance){
+                        printf("Enter Withdraw Amount: ");
+                        scanf("%f", &withdraw_amount);
+                    }
+                    
+                    if(withdraw_amount <= b[i].balance){
+                        b[i].balance -= withdraw_amount;
+                        printf("Account Number : %d\\n", b[i].account_num);
+                        printf("Account Holder's Name : %s\\n", b[i].account_name);
+                        printf("Account Balance : $%.2f\\n", b[i].balance);
+                        printf("\\n");
+                        printf("You successfully withdrew %.2f\\n", withdraw_amount);
+                        printf("Remaining balance is $%.2f\\n\\n", b[i].balance);
+                        break;
+                    }
+                }
+            }
+        }
+    }else printf("\\n!! Account Number not found !!\\n\\n");
+    
+    
+};
+void display (Bank_Account *b, int *num_accounts){
+    printf("\\n----------DISPLAY----------\\n\\n");
+    for(int i=0 ; i<*num_accounts ; i++){
+            printf("Account Number : %d\\n", b[i].account_num);
+            printf("Account Holder's Name : %s\\n", b[i].account_name);
+            printf("Account Balance : $%.2f\\n", b[i].balance);
+            printf("\\n");
+    }
+};`}
+                    language='c'
+                    showLineNumbers={true}
+                    wrapLines={true}
+                    theme={myCustomTheme}
+                    customStyle={customStyle}
+                /> <button className="Day--button" onClick={handleCodeDisplay2}>&otimes;</button>
+                </div>}
+                <div className="Day--thoughts">
+                <p  Style={"border:3px dotted #98c379; padding: 10px; border-radius: 10px"}>
+                <strong>ChatGPT</strong> :<br/>
+                Congratulations on successfully <br/>
+                solving two C challenges involving structs! <br/>
+                Your dedication to problem-solving <br/>
+                and coding is commendable. <br/>
+                By completing these challenges, <br/>
+                you've gained valuable experience <br/>
+                in working with structures, functions, <br/>
+                and user interactions in C programming. <br/>
+                Keep up the good work <br/>
+                and continue to explore <br/>
+                more complex programming concepts <br/>
+                to enhance your skills further. <br/>
+                If you have any questions or <br/>
+                need further assistance, <br/>
+                feel free to ask. Happy coding!<br/>
+                </p>
+            </div>
         </section>
     )
 }

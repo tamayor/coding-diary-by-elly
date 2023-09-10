@@ -176,7 +176,7 @@
     }
     .Day--bookmark{
       top: 45px;
-      left: -1px;
+      left: -5px;
       position: absolute;
       width: 5px;
       height: 5px;
@@ -187,10 +187,11 @@
       transition: height .5s ease, top .5s ease;
     }
     .Day:hover .Day--bookmark{
+      z-index: 2;
       height: 100%;
       width: 5px;
       top: 0;
-      left: -1px;
+      left: -5px;
     
     }
     .Day--day{
