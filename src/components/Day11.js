@@ -9,12 +9,7 @@ function Day(){
             <h4 className="Day--date">September 10, 2023</h4>
             <h4 className="Day--date">just for fun</h4>
             <p className="Day--thoughts">
-                <strong>I spent so many time developing this website<br/>
-                Ends up the teacher told me that<br/>
-                I just copied it from THENX website</strong> <br/>
-            </p> 
-            <p className="Day--thoughts">
-                The first time I donated blood, <br/>
+                The first time <strong>I donated blood</strong>, <br/>
                 I felt a sense of curiosity about the experience. <br/>
                 It's quite a unique feeling, <br/>
                 knowing that your blood is leaving your body.

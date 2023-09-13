@@ -23,7 +23,7 @@ function Day(){
             <a href="https://tamayor.github.io/bscs3a-treasure/" target="_blank" rel="noreferrer">
                 <button className="Day--button">Class Treasure</button>
             </a>
-            <p  className="Day--thoughts"><stron>PS : </stron> <i>Made for Phone Viewing</i></p>
+            <p  className="Day--thoughts"><strong>PS : </strong> <i>Made for Phone Viewing</i></p>
         </section>
     )
 }

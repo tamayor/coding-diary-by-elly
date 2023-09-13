@@ -1,0 +1,327 @@
+
+  @media (min-width: 700px){
+    .Day{
+      width: 90%;
+      position: relative;
+      font-family: 'Encode Sans', sans-serif;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 10px;
+    
+    }
+    .Day--bookmark{
+      top: 48px;
+      left: -1px;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      margin: 0;
+      border-radius: 10px;
+      background-color: var(--special-color);
+      border: none;
+      transition: height .5s ease, top .5s ease;
+    }
+    .Day:hover .Day--bookmark{
+      height: 100%;
+      width: 5px;
+      top: 0;
+      left: -1px;
+    
+    }
+    .Day--day{
+      margin: 20px 0 2px;
+      width: 100%;
+    }
+    .Day--day-count{
+      font-size: 30px;
+    }
+    .Day--day-title{
+      font-weight: 500;
+    }
+    .Day--date{
+      margin: 0;
+      font-weight: 100;
+      width: 100%;
+      font-size: 15px;
+      text-align: right;
+    }
+    .Day--thoughts{
+      width: 60%;
+      text-align: center;
+    }
+    .Day--button{
+      color: rgb(209, 209, 209);
+      background-color: var(--button-color);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: max-content;
+      transition: background-color .3s ease,  border-radius .3s ease;
+    
+    }
+    .Day--button:hover{
+      cursor: pointer;
+      color: var(--button-color);
+      background-color: var(--special-color);
+      border-radius: 20px;
+    }
+    
+    .Day--code{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      width: 90%;
+    }
+    .Day--code-expand{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      z-index: 1;
+      width: 100vw;
+      height: max-content;
+    }
+    .Day--code span code{
+      width: 100%;
+    }
+    .code-expand{
+      background-color: var(--special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 30px;
+      border-radius: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .code-shrink{
+      background-color: var(--sub-special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 30px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .certificate-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .certificate{
+      width:500px; 
+      height: 336.70px;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    .hide-certificate{
+      width:500px; 
+      height: 0;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    /* Define a custom scrollbar style */
+    ::-webkit-scrollbar {
+      position: absolute;
+      width: 10px; /* Width of the scrollbar */
+      height: 0px;
+    }
+    
+    /* Track (background) of the scrollbar */
+    ::-webkit-scrollbar-track {
+      background: #252525;
+    }
+    
+    /* Handle (thumb) of the scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background: #393939;
+      border-radius: 10px; /* Rounded corners for the thumb */
+    }
+    
+    /* On hover, style the scrollbar handle */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #98c379;
+    }
+    
+  }
+  @media only screen and (min-width: 200px) and ((max-width: 699px)){
+    .Day{
+      width: 90%;
+      position: relative;
+      font-family: 'Encode Sans', sans-serif;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 10px;
+    
+    }
+    .Day--bookmark{
+      top: 45px;
+      left: -5px;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      margin: 0;
+      border-radius: 10px;
+      background-color: var(--special-color);
+      border: none;
+      transition: height .5s ease, top .5s ease;
+    }
+    .Day:hover .Day--bookmark{
+      z-index: 2;
+      height: 100%;
+      width: 5px;
+      top: 0;
+      left: -5px;
+    
+    }
+    .Day--day{
+      margin: 20px 0 2px;
+      width: 100%;
+    }
+    .Day--day-count{
+      font-size: 20px;
+    }
+    .Day--day-title{
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .Day--date{
+      font-size: 12px;
+      margin: 10px;
+      font-weight: 100;
+      width: 100%;
+      text-align: right;
+    }
+    .Day--thoughts{
+      font-size: 12px;
+      width: 80%;
+      text-align: left;
+    }
+    .Day--button{
+      color: rgb(209, 209, 209);
+      background-color: var(--button-color);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: max-content;
+      transition: background-color .3s ease,  border-radius .3s ease;
+    
+    }
+    .Day--button:hover{
+      cursor: pointer;
+      color: var(--button-color);
+      background-color: var(--special-color);
+      border-radius: 20px;
+    }
+    
+    .Day--code{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      width: 90%;
+    }
+    .Day--code-expand{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      z-index: 1;
+      width: 100vw;
+      height: max-content;
+    }
+    .Day--code span code{
+      width: 100%;
+    }
+    .code-expand{
+      background-color: var(--special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 0;
+      border-radius: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .code-shrink{
+      background-color: var(--sub-special-color);
+      position: absolute;
+      text-align: center;
+      width: 5px; 
+      padding: 5px;
+      height: 5px;
+      right: 0;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .certificate{
+      width:300px; 
+      height: 202.04px;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    .hide-certificate{
+      position: absolute;
+      z-index: -1;
+      top: 100px;
+      opacity: 0;
+      width:300px; 
+      height: 0;
+      margin: 10px; 
+      box-shadow: 0 0 50px 1px rgb(222, 255, 231, .3);
+      transition: height .5s ease;
+    }
+    
+    /* Define a custom scrollbar style */
+    ::-webkit-scrollbar {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+    
+    /* Track (background) of the scrollbar */
+    ::-webkit-scrollbar-track {
+      background: #252525;
+    }
+    
+    /* Handle (thumb) of the scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background: #393939;
+      border-radius: 10px; /* Rounded corners for the thumb */
+    }
+    
+    /* On hover, style the scrollbar handle */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #98c379;
+    }
+   
+  }

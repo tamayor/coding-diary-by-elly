@@ -1,0 +1,16 @@
+section{
+    min-height: auto;
+    max-width: auto ;
+}
+h1{
+    color: rgb(154, 59, 59);
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-align: center;
+    margin: 0 0 20px;
+}
+h4{
+    color: rgb(128, 128, 128);
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    margin: 0 0 20px;
+}

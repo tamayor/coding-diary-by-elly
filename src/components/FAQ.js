@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import profile from '../images/profile-user.png';
 import questionmark from '../images/question-sign-in-circles.png';
 import clock from '../images/clock.png';
-import './Nav.css';
+import './FAQ.css';
 
-const Nav = () => {
+const FAQ= () => {
 
     const [info, setInfo] = useState([
         {
@@ -32,9 +32,11 @@ const Nav = () => {
 
     const infoElement = info.map((info, index) => {
         return (
-            <div className={info.showText ? 'Nav-faq-container' : 'Nav-faq-container-compressed'} key={index}>
+            <div className='Nav-faq-container' key={index}>
+                <div  className={info.showText ? 'show-text' : 'dont-show-text'} onClick={() => infoFilter(index)}>
+                    <p>{info.text}</p>
+                </div>
                 <img src={info.img} alt='person icon' onClick={() => infoFilter(index)} />
-                <p className={info.showText ? 'show-text' : 'dont-show-text'} onClick={() => infoFilter(index)}>{info.text}</p>
             </div>
         );
     });
@@ -46,4 +48,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default FAQ;
