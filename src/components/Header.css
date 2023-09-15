@@ -14,7 +14,7 @@ header{
 }
 .Header--title{
   color: var(--special-color);
-  font-size: clamp(2.5rem ,4vw, 5rem);
+  font-size: clamp(2.5rem ,4vw, 4rem);
   margin: 0;
   text-align: left;
 }

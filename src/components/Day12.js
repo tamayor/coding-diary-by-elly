@@ -6,9 +6,15 @@ import './Day.css';
 
 function Day(){
     const [codeDisplay, setCodeDisplay] = React.useState(false);
-    const [codeFeedBack, setCodeFeedBack] = React.useState(false);
     const [codeExpand, setCodeExpand] = React.useState(false);
+    const [codeFeedBack, setCodeFeedBack] = React.useState(false);
     const [feedBackExpand, setFeedBackExpand] = React.useState(false);
+    const [gptCodeDisplay, setgptCodeDisplay] = React.useState(false);
+    const [gptCodeExpand, setgptCodeExpand] = React.useState(false);
+    const [newCodeDisplay, setNewCodeDisplay] = React.useState(false);
+    const [newCodeExpand, setNewCodeExpand] = React.useState(false);
+    const [newCodeFeedBack, setNewCodeFeedBack] = React.useState(false);
+    const [newFeedBackExpand, setNewFeedBackExpand] = React.useState(false);
     const [cssDisplay, setCssDisplay] = React.useState(false);
     const [cssExpand, setCssExpand] = React.useState(false);
     function handleCodeDisplay(){
@@ -22,6 +28,7 @@ function Day(){
             <hr className="Day--bookmark"/>
             <h2 className="Day--day"><span className="Day--day-count">Day 12</span> :<br/>  <span className="Day--day-title">Inspired by a Board Mate </span></h2> 
             <h4 className="Day--date">September 13, 2023</h4>
+            <h4 className="Day--date">Morning</h4>
             <p  className="Day--thoughts">
                 <strong>My Board Mate is Coding so I thought I should too!</strong> <br/>
                 He is trying to create a program that<br/>
@@ -379,9 +386,10 @@ bool check_birth_month_and_date(int *birth_month, int *birth_date){
                 />
                 <button className="Day--button" onClick={handleCodeDisplay}>&otimes;</button>
                 </div>}
+
             <p className="Day--thoughts">
                 This is very long and hard to maintain so <br/>
-                I ask chatGPT and this is his feedback. <br/>
+                I ask chatGPT and this is its feedback. <br/>
             </p>
             {!codeFeedBack && <button className="Day--button" onClick={()=>{setCodeFeedBack(!codeFeedBack)}}>chatGPT feedback</button>}
             {codeFeedBack && <div className={ feedBackExpand ? "Day--code-expand" : "Day--code" }>
@@ -449,18 +457,293 @@ bool check_birth_month_and_date(int *birth_month, int *birth_date){
                 />
                 <button className="Day--button" onClick={()=>{setCodeFeedBack(!codeFeedBack)}}>&otimes;</button>
             </div>}
+            <br/>
+            <p className="Day--thoughts">
+            Its recommendation
+            </p>
+            <br/>
+
+            {!gptCodeDisplay && <button className="Day--button" onClick={()=>setgptCodeDisplay(prevValue => !prevValue)}>chatGPT Code recommendation</button>}
+            {gptCodeDisplay && <div className={ gptCodeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setgptCodeExpand(prevValue => !prevValue)}>
+                    <button className={gptCodeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
+                text= {`#include <stdio.h>
+#include <stdbool.h>
+
+const char* zodiacSigns[] = {
+    "Capricornus (Goat)", "Aquarius (Water Bearer)", "Pisces (Fish)",
+    "Aries (Ram)", "Taurus (Bull)", "Gemini (Twins)",
+    "Cancer (Crab)", "Leo (Lion)", "Virgo (Virgin)",
+    "Libra (Balance)", "Scorpius (Scorpion)", "Sagittarius (Archer)"
+};
+
+const int zodiacStartDates[] = { 20, 19, 21, 20, 21, 21, 22, 23, 23, 24, 22, 21 };
+
+bool inRange(int value, int min, int max) {
+    return value >= min && value <= max;
+}
+
+int getZodiacIndex(int month, int day) {
+    if (inRange(day, 1, zodiacStartDates[month - 1]))
+        return month - 1;
+    
+    if (month == 12 && inRange(day, zodiacStartDates[month - 1], 31))
+        return 0; // Capricornus wraps around to January
+    
+    for (int i = month; i < 12; i++) {
+        if (inRange(day, zodiacStartDates[i], zodiacStartDates[i + 1] - 1))
+            return i;
+    }
+
+    return -1; // Invalid date
+}
+
+int main() {
+    int birth_month;
+    int birth_date;
+    char try_again;
+    
+    do {
+        printf("What is your Birth Month (1 - 12): ");
+        scanf("%d", &birth_month);
+        printf("What is your Birth Date (1 - 31): ");
+        scanf("%d", &birth_date);
+        printf("\\n");
+
+        if (birth_month >= 1 && birth_month <= 12 && birth_date >= 1 && birth_date <= 31) {
+            int zodiacIndex = getZodiacIndex(birth_month, birth_date);
+            if (zodiacIndex != -1) {
+                printf("Zodiac Sign is %s\\n\\n", zodiacSigns[zodiacIndex]);
+            } else {
+                printf("Invalid Date\\n\\n");
+            }
+        } else {
+            printf("Invalid Input\\n\\n");
+        }
+
+        printf("Wanna check different birthdate's zodiac sign? (y/n): ");
+        scanf(" %c", &try_again);
+        printf("\\n");
+
+    } while (try_again == 'y' || try_again == 'Y');
+    
+    return 0;
+}`}
+                    language='c'
+                    showLineNumbers={true}
+                    wrapLines={true}
+                    theme={myCustomTheme}
+                    customStyle={customStyle}
+                />
+                <button className="Day--button" onClick={()=>setgptCodeDisplay(prevValue => !prevValue)}>&otimes;</button>
+                </div>}
+            <br/>
+
+            <p className="Day--thoughts">
+                I changed the entire code this afternoon<br/>
+                inspired by ChatGPT's code recommendation<br/>
+            </p>
+            {!newCodeDisplay && <button className="Day--button" onClick={()=>setNewCodeDisplay(prevValue => !prevValue)}>New Code</button>}
+            {newCodeDisplay && <div className={ newCodeExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setNewCodeExpand(prevValue => !prevValue)}>
+                    <button className={newCodeExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
+                text= {`#include <stdio.h>
+
+int main(){
+    
+    char * zodiacSigns[] = {
+        "Aquarius (Water Bearer)",
+        "Pisces (Fish)",
+        "Aries (Ram)",
+        "Taurus (Bull)",
+        "Gemini (Twins)",
+        "Cancer (Crab)",
+        "Leo (Lion)",
+        "Virgo (Virgin)",
+        "Libra (Balance)",
+        "Scorpius (Scorpion)",
+        "Sagittarius (Archer)",
+        "Capricornus (Goat)"
+    };
+    int zodiacMidDate[] = {20,19,21,20,21,21,23,23,23,23,22,22};
+    int daysInMonth[] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    char *months[] = {
+        "January", 
+        "February", 
+        "March", 
+        "April", 
+        "May", 
+        "June",
+        "July", 
+        "August", 
+        "September", 
+        "October", 
+        "November", 
+        "December"
+    };
+    
+    int birth_month;
+    int birth_date;
+    char loop;
+    
+    while(1){
+        printf("Your Birth Month (1-12) : ");
+        scanf("%d", &birth_month);
+        // 1: birth_month = 2
+        // 2: birth_month = 1
+        // 3: birth_month = 12
+    
+        if(birth_month >= 1 && birth_month <= 12){
+            printf("Your Birth Date (1-30) :");
+            scanf("%d", &birth_date);
+        // 1: birth_date = 15
+        // 2: birth_date = 1
+        // 3: birth_date = 31	
+        }else{
+            printf("Invalid Month\\n");
+            return 0;
+        }
+        
+        if(birth_date >= 1 && birth_date <= 31){
+            // 3: 31 >= 1 && 31 <=31
+            printf("%s %d\\n", months[birth_month-1], birth_date);
+            // 3: "Capricornus (Goat)"
+            if(birth_date >= zodiacMidDate[birth_month-1] && birth_date <= daysInMonth[birth_month-1]){		
+                    printf("Your zodiac sign is %s\\n", zodiacSigns[birth_month-1]);
+            }else if(birth_date >= 1 && birth_date < zodiacMidDate[birth_month-1]){
+                // 1: 15 >=  1 && 15 <= 19	
+                // 2: 1 >=  1 && 1 <= 19	
+                if(birth_month == 1) {
+                    birth_month=12;
+                    printf("Your zodiac sign is %s\\n", zodiacSigns[birth_month-1]);
+                    // 2: "Capricornus (Goat)"
+                }
+                else{
+                    printf("Your zodiac sign is %s\\n", zodiacSigns[birth_month-2]);
+                    // 1: "Aquarius (Water Bearer)"
+                }
+            }else{
+                printf("Invalid input\\n");
+            }
+            
+        }else{
+            printf("Invalid Date\\n");
+            return 0;
+        }
+        printf("\\nTry another Birthday ? (y/n) : ");
+        scanf(" %c", &loop);
+        printf("\\n");
+        if(loop!= 'y'){
+            return 0;
+        }
+    };
+                }`}
+                    language='c'
+                    showLineNumbers={true}
+                    wrapLines={true}
+                    theme={myCustomTheme}
+                    customStyle={customStyle}
+                />
+                <button className="Day--button" onClick={()=>setNewCodeDisplay(prevValue => !prevValue)}>&otimes;</button>
+                </div>}
+            <br/>
+
+            <p className="Day--thoughts">
+                I ask chatGPT and this is its feedback. <br/>
+            </p>
+            {!newCodeFeedBack && <button className="Day--button" onClick={()=>{setNewCodeFeedBack(!newCodeFeedBack)}}>chatGPT New Code feedback</button>}
+            {newCodeFeedBack && <div className={ newFeedBackExpand ? "Day--code-expand" : "Day--code" }>
+                <div onClick={()=>setNewFeedBackExpand(prevValue => !prevValue)}>
+                    <button className={newFeedBackExpand ? "code-shrink" : "code-expand" }></button>
+                </div>
+                <CodeBlock
+                text= {`//      Your code is well-structured and effectively accomplishes the task of determining 
+//      a person's zodiac sign based on their birth month and date. 
+//      Here's a summary of the code's strengths and areas for improvement:
+//      
+//
+//
+//      **Strengths:**
+//      
+//      1. **Clear Structure:** 
+//      
+//      Your code is organized and easy to follow. 
+//      It's divided into distinct sections for zodiac sign data, month data, 
+//      and the main program logic, making it readable and maintainable.
+//      
+//      2. **Input Validation:** 
+//      
+//      You validate both the birth month and date to ensure they are within the valid ranges. 
+//      This is a good practice to handle potential user input errors.
+//      
+//      3. **Handling Edge Cases:** 
+//      
+//      Your code correctly handles cases where the birth date falls before 
+//      the zodiac transition date (e.g., January). 
+//      It adjusts the birth month accordingly.
+//      
+//      4. **Use of Arrays:** 
+//      
+//      You efficiently use arrays to store zodiac sign names, 
+//      zodiac transition dates, and month names. 
+//      This enhances code readability and maintainability.
+//      
+//
+//
+//      **Areas for Improvement:**
+//      
+//      1. **Comments:** 
+//      
+//      While you do have some comments in your code, 
+//      you could consider adding more comments to explain 
+//      the purpose of certain sections or to provide additional context. 
+//      For example, you can explain the purpose of \`zodiacMidDate\` and \`daysInMonth\` arrays.
+//      
+//      2. **Error Messages:** 
+//      
+//      Your error messages are informative, 
+//      but you could enhance them by providing more 
+//      specific details about the error. 
+//      For instance, you can specify the valid ranges when
+//      displaying the "Invalid Month" or "Invalid Date" messages.
+//      
+//      3. **Simplify Loop:** 
+//      
+//      The loop structure works, 
+//      but you could simplify the loop condition by 
+//      using a \`while (1)\` loop and using \`break\` to exit when needed. 
+//      This can make the code slightly more concise.
+//      
+//      Overall, your code is well-written and functional, 
+//      and it effectively accomplishes the task at hand. 
+//      Adding a few more comments and refining error messages 
+//      would be minor improvements to consider.`}
+                    language='c'
+                    showLineNumbers={true}
+                    wrapLines={true}
+                    theme={myCustomTheme}
+                    customStyle={customStyle}
+                />
+                <button className="Day--button" onClick={()=>{setNewCodeFeedBack(!newCodeFeedBack)}}>&otimes;</button>
+            </div>}
+            <br/>    
+
 
             <br/>
             <br/>
             <p className="Day--thoughts">
                 Also today, <br/>
-                <strong> I will redesign this website.</strong><br/>
-                Im going to change it's CSS because <br/>
+                <strong> I did redesign this website.</strong><br/>
+                I changed it's CSS because <br/>
                 Last time, I just learned how to <br/>
                 properly optimize and make the web responsive.<br/>
                 Take a look how dumb I was<br/>
                 ---same things in different media queries---<br/>
-                making the code redundant<br/>
+                making the code redundant.<br/>
             </p>
             {!cssDisplay && <button className="Day--button" onClick={()=> setCssDisplay(prevValue => !prevValue)}>Day.css</button>}
             {cssDisplay && <div className={ cssExpand ? "Day--code-expand" : "Day--code" }>
