@@ -12,8 +12,8 @@ import Day9 from './components/Day9';
 import Day10 from './components/Day10';
 import Day11 from './components/Day11';
 import Day12 from './components/Day12';
-// import Day13 from './components/Day13';
-// import Day14 from './components/Day14';
+import Day13 from './components/Day13';
+import Day14 from './components/Day14';
 // import Day15 from './components/Day15';
 // import Day16 from './components/Day16';
 // import Day17 from './components/Day17';
@@ -28,7 +28,7 @@ function App() {
   const Days = [
                 <Day1 name='1'/>,<Day2 name='2'/>,<Day3 name='3'/>,<Day4 name='4'/>,<Day5 name='5'/>,
                 <Day6 name='6'/>, <Day7 name='7'/>,<Day8 name='8'/> ,<Day9 name='9'/>,<Day10 name='10'/>
-                ,<Day11 name='11'/>,<Day12 name='12'/>
+                ,<Day11 name='11'/>,<Day12 name='12'/>,<Day13 name='13'/>,<Day14 name='14'/>
               ]
 
   const filteredDays = Days.filter (day => {
